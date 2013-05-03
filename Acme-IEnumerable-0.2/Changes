@@ -1,0 +1,7 @@
+Revision history for Perl extension Acme::IEnumerable.
+
+v0.2 May 2013
+  - Attempt to fix file permission problems
+
+v0.1 Apr 2013
+  - Initial Release.
