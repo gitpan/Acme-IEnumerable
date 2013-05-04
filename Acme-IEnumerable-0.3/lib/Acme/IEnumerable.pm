@@ -12,7 +12,7 @@ BEGIN {
 
   @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
   @EXPORT = @EXPORT_OK;
-  $VERSION = '0.2';
+  $VERSION = '0.3';
 };
 
 #####################################################################
@@ -100,7 +100,8 @@ sub reverse {
 
   return $self->to_list unless $self->count;
 
-  bless {
+  my $new;
+  $new = bless {
     _list => $self->{_list},
     _last => 0,
     _zero => scalar(@{ $self->{_list} }) - 1,
@@ -108,8 +109,8 @@ sub reverse {
     _new => sub {
       return sub {
         state $index = 0;
-        return unless $index < $self->count;
-        return \($self->element_at($index++));
+        return unless $index < $new->count;
+        return \($new->element_at($index++));
       }
     },
   }, __PACKAGE__;

@@ -5,6 +5,7 @@ MANIFEST
 README
 t/00basic.t
 t/01simple.t
+t/02reverse.t
 t/98podsyn.t
 t/99podcov.t
 eg/example.pl
