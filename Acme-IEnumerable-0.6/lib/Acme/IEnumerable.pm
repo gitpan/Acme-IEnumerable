@@ -12,7 +12,7 @@ BEGIN {
 
   @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
   @EXPORT = @EXPORT_OK;
-  $VERSION = '0.5';
+  $VERSION = '0.6';
 };
 
 #####################################################################
@@ -119,15 +119,15 @@ sub reverse {
 #####################################################################
 #
 #####################################################################
-sub find { ... }
-sub find_index { ... }
-sub find_last { ... }
-sub find_last_idex { ... }
-sub exists { ... }
-sub find_all { ... }
-sub binary_search { ... }
-sub index_of { ... }
-sub last_index_of { ... }
+# sub find { ... }
+# sub find_index { ... }
+# sub find_last { ... }
+# sub find_last_idex { ... }
+# sub exists { ... }
+# sub find_all { ... }
+# sub binary_search { ... }
+# sub index_of { ... }
+# sub last_index_of { ... }
 
 1;
 
@@ -254,7 +254,7 @@ sub range {
   my ($class, $from, $count) = @_;
 
   if (defined $count) {
-    ...
+    # ...
   }
 
   return _create sub {
@@ -502,7 +502,8 @@ sub pairwise {
   # TODO: make variant with a seed?
   my ($self, $func) = @_;
   return $self->each_cons(2, $func);
-  ...;
+
+  # ...
   my $base = $self->new();
   my $prev = $base->();
   return unless ref $prev;
@@ -549,7 +550,7 @@ sub aggregate {
     $seed = shift;
     $func = shift;
   } else {
-    ...
+    # ...
   }
 
   while (1) {
@@ -668,31 +669,31 @@ sub for_each {
 #####################################################################
 #
 #####################################################################
-sub select_many { ... }
-sub contains { ... }
-sub sequence_equal { ... }
-sub distinct { ... }
-sub union { ... }
-sub except { ... }
-sub intersect { ... }
-sub default_if_empty { ... }
-sub single_or_default { ... }
-sub concat { ... }
-sub group_join { ... }
-sub join { ... }
-sub empty { ... }
-sub cast { ... }
-sub to_lookup { ...}
-sub to_dictionary { ... }
+# sub select_many { ... }
+# sub contains { ... }
+# sub sequence_equal { ... }
+# sub distinct { ... }
+# sub union { ... }
+# sub except { ... }
+# sub intersect { ... }
+# sub default_if_empty { ... }
+# sub single_or_default { ... }
+# sub concat { ... }
+# sub group_join { ... }
+# sub join { ... }
+# sub empty { ... }
+# sub cast { ... }
+# sub to_lookup { ...}
+# sub to_dictionary { ... }
 
 #####################################################################
 #
 #####################################################################
-sub distinct_by { ... }
-sub min_by { ... }
-sub max_by { ... }
+# sub distinct_by { ... }
+# sub min_by { ... }
+# sub max_by { ... }
 
-sub to_enumerable { ... }
+# sub to_enumerable { ... }
 
 
 1;

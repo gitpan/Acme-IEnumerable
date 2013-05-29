@@ -1,5 +1,8 @@
 Revision history for Perl extension Acme::IEnumerable.
 
+v0.6 May 2013
+  - Comment out ... usage to support v5.10
+
 v0.5 May 2013
   - Instead of requiring v5.16 require v5.10
 
