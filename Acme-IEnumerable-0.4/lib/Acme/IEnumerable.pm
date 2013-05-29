@@ -12,7 +12,7 @@ BEGIN {
 
   @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
   @EXPORT = @EXPORT_OK;
-  $VERSION = '0.3';
+  $VERSION = '0.4';
 };
 
 #####################################################################
@@ -210,7 +210,7 @@ use strict;
 use warnings;
 use v5.16;
 use Carp;
-use base qw/Acme::IEnumerable/;
+use base qw/Acme::IEnumerable::List/;
 
 sub from_list {
   my $class = shift;
