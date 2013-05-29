@@ -12,7 +12,7 @@ BEGIN {
 
   @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
   @EXPORT = @EXPORT_OK;
-  $VERSION = '0.4';
+  $VERSION = '0.5';
 };
 
 #####################################################################
@@ -22,7 +22,7 @@ package Acme::IEnumerable::List;
 use base qw/Acme::IEnumerable/;
 use strict;
 use warnings;
-use v5.16;
+use v5.10;
 use Carp;
 
 sub _create {
@@ -137,7 +137,7 @@ sub last_index_of { ... }
 package Acme::IEnumerable::Ordered;
 use strict;
 use warnings;
-use v5.16;
+use v5.10;
 use Carp;
 use base qw/Acme::IEnumerable/;
 
@@ -208,7 +208,7 @@ sub _then_by {
 package Acme::IEnumerable::Grouping;
 use strict;
 use warnings;
-use v5.16;
+use v5.10;
 use Carp;
 use base qw/Acme::IEnumerable::List/;
 
@@ -230,7 +230,7 @@ sub key { $_[0]->{key} }
 package Acme::IEnumerable;
 use strict;
 use warnings;
-use v5.16;
+use v5.10;
 use Carp;
 
 do {
